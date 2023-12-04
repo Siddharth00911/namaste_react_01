@@ -19,4 +19,6 @@ const node_parrent = React.createElement('div', {id: 'parrent'},
 React.createElement('div', {id: 'child'}, 
 [React.createElement('h1', {}, 'this is -h1- tag'), React.createElement('h2', {}, 'this is -h2- tag')]));
 
+// we have attahced parrent_node to root_node
 rootnode.render(node_parrent);
+
