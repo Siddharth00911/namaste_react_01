@@ -1,3 +1,6 @@
+import React from "react";
+import  ReactDOM  from "react-dom/client";
+
 // const node1 = React.createElement('p', {id:'node1'}, 'HTML for node1');
 
 const rootnode = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,7 +20,7 @@ const rootnode = ReactDOM.createRoot(document.getElementById('root'));
 
 const node_parrent = React.createElement('div', {id: 'parrent'}, 
 React.createElement('div', {id: 'child'}, 
-[React.createElement('h1', {id:'inner_h1'}, 'this is -h1- tag'), React.createElement('h2', {}, 'this is -h2- tag')]));
+[React.createElement('h1', {id:'inner_h1'}, 'this is -NEW-h1- tag'), React.createElement('h2', {}, 'this is -h2- tag')]));
 
 // we have attahced parrent_node to root_node
 rootnode.render(node_parrent);
