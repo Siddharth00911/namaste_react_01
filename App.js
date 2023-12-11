@@ -1,27 +1,47 @@
 import React from "react";
-import  ReactDOM  from "react-dom/client";
+import ReactDOM from "react-dom/client";
 
-// const node1 = React.createElement('p', {id:'node1'}, 'HTML for node1');
+//React Function Componant
+const Function1 = () => {
+  return (
+    <>
+      <h1>I am in Function 1</h1>
+      <Function2 />
+      <Function2></Function2>
+      {Function2()}
+      <div>-----------------------------------------------------</div>
+      {element2}
+    </>
+  );
+};
 
-const rootnode = ReactDOM.createRoot(document.getElementById('root'));
-// rootnode.render(node1);
+const Function2 = () => {
+  return (
+    <>
+      <div>I am in Function 2</div>
+    </>
+  );
+};
 
+//React Element
+const element1 = (
+  <div>
+    <div>I am in Element 1</div>
+  </div>
+);
 
-// -------------------------- create this syntax in react-------------------
+const element2 = (
+  <div>
+    {element1}
+    <div>I am in Element 2</div>
+  </div>
+);
 
-// <div id='parent'>
-//     <div id='child'>
-//         <h1>this is -h1- tag</h1>
-//         <h2>this is -h2- tag</h2>
-//     </div>
-// </div> 
-
-// we have nested react code like above <div> tag
-
-const node_parrent = React.createElement('div', {id: 'parrent'}, 
-React.createElement('div', {id: 'child'}, 
-[React.createElement('h1', {id:'inner_h1'}, 'this is -NEW-h1- tag'), React.createElement('h2', {}, 'this is -h2- tag')]));
-
-// we have attahced parrent_node to root_node
-rootnode.render(node_parrent);
-
+const newElement = (
+  <div>
+    <Function1 />
+  </div>
+);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Function1 />);         To access: React Functional Componant
+root.render(newElement); /*-------------To access: React Element */
